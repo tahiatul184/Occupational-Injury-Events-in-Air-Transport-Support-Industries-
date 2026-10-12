@@ -1,0 +1,457 @@
+{
+  "study_status": "Initial source-coded benchmark; original ground-operation H1-H8 study not completed",
+  "config": {
+    "seed": 2026,
+    "scope": "NAICS starts with 4881; unverified ground activity",
+    "predictor": "narrative only",
+    "target": "published OIICS 2.x event division, first digit",
+    "training": "SIR 2015-2020",
+    "validation": "SIR 2021",
+    "temporal_holdout": "SIR 2022",
+    "excluded": "Previously inspected groups; unspecified labels; SIR groups reaching 2023+; invalid dates/blank text",
+    "selection_metric": "macro F1 over divisions actually represented in 2021 validation gold source codes",
+    "features": {
+      "ngrams": [
+        1,
+        2
+      ],
+      "min_df": 2,
+      "max_features": 30000,
+      "sublinear_tf": true
+    },
+    "regularization_C": 1.0,
+    "class_weight": "balanced",
+    "bootstrap_resamples": 500,
+    "external_comparisons": "ITA actual 2023/2024 dates, coded with BLS SOII autocoder OIICS 2.01; not independent gold"
+  },
+  "training_records": 202,
+  "training_event_groups": 201,
+  "training_division_counts": {
+    "1": 2,
+    "2": 31,
+    "3": 1,
+    "4": 77,
+    "5": 8,
+    "6": 76,
+    "7": 7
+  },
+  "selection": {
+    "selected_model": "tfidf_logistic",
+    "selection_metric": "macro F1 over divisions actually represented in 2021 validation gold source codes",
+    "configuration_sha256": "0b7f3a2788d5462657a62bcaa6f8287c3c56ad1413e433567fe62506b21bae99",
+    "data_sha256": "bea81ee7c47e545f1a80016c07e36fc69fa8c052a0ec87e78897a6bb3ffc79fd",
+    "validation": {
+      "majority": {
+        "records": 34,
+        "event_groups": 34,
+        "source_reference_accuracy": 0.38235294117647056,
+        "macro_f1_supported_divisions": 0.0921985815602837,
+        "macro_f1_all_seven_divisions": 0.0790273556231003,
+        "weighted_f1": 0.21151439299123906,
+        "supported_reference_divisions": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "unsupported_reference_divisions": [
+          "7"
+        ],
+        "reference_division_counts": {
+          "1": 2,
+          "2": 6,
+          "3": 1,
+          "4": 13,
+          "5": 1,
+          "6": 11
+        },
+        "predicted_division_counts": {
+          "4": 34
+        },
+        "reference_interpretation": "Reproduction of OSHA published event divisions; individual label provenance not verified",
+        "fit_seconds": 0.006758928298950195,
+        "tfidf_features": 0
+      },
+      "tfidf_logistic": {
+        "records": 34,
+        "event_groups": 34,
+        "source_reference_accuracy": 0.8823529411764706,
+        "macro_f1_supported_divisions": 0.6257215007215007,
+        "macro_f1_all_seven_divisions": 0.5363327149041435,
+        "weighted_f1": 0.8414502164502164,
+        "supported_reference_divisions": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "unsupported_reference_divisions": [
+          "7"
+        ],
+        "reference_division_counts": {
+          "1": 2,
+          "2": 6,
+          "3": 1,
+          "4": 13,
+          "5": 1,
+          "6": 11
+        },
+        "predicted_division_counts": {
+          "2": 5,
+          "4": 15,
+          "5": 1,
+          "6": 13
+        },
+        "reference_interpretation": "Reproduction of OSHA published event divisions; individual label provenance not verified",
+        "fit_seconds": 0.03524208068847656,
+        "tfidf_features": 1145
+      },
+      "tfidf_linear_svm": {
+        "records": 34,
+        "event_groups": 34,
+        "source_reference_accuracy": 0.8823529411764706,
+        "macro_f1_supported_divisions": 0.6257215007215007,
+        "macro_f1_all_seven_divisions": 0.5363327149041435,
+        "weighted_f1": 0.8414502164502164,
+        "supported_reference_divisions": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "unsupported_reference_divisions": [
+          "7"
+        ],
+        "reference_division_counts": {
+          "1": 2,
+          "2": 6,
+          "3": 1,
+          "4": 13,
+          "5": 1,
+          "6": 11
+        },
+        "predicted_division_counts": {
+          "2": 5,
+          "4": 15,
+          "5": 1,
+          "6": 13
+        },
+        "reference_interpretation": "Reproduction of OSHA published event divisions; individual label provenance not verified",
+        "fit_seconds": 0.01643824577331543,
+        "tfidf_features": 1145
+      }
+    },
+    "test_metrics_used_for_selection": false,
+    "refit_on_validation": false
+  },
+  "evaluations": {
+    "SIR_2022_temporal_test": {
+      "tfidf_logistic": {
+        "records": 45,
+        "event_groups": 45,
+        "source_reference_accuracy": 0.8666666666666667,
+        "macro_f1_supported_divisions": 0.8234920634920634,
+        "macro_f1_all_seven_divisions": 0.5882086167800453,
+        "weighted_f1": 0.8571428571428571,
+        "supported_reference_divisions": [
+          "2",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "unsupported_reference_divisions": [
+          "1",
+          "3"
+        ],
+        "reference_division_counts": {
+          "2": 10,
+          "4": 13,
+          "5": 3,
+          "6": 18,
+          "7": 1
+        },
+        "predicted_division_counts": {
+          "2": 10,
+          "4": 15,
+          "5": 1,
+          "6": 18,
+          "7": 1
+        },
+        "reference_interpretation": "Reproduction of OSHA published event divisions; individual label provenance not verified",
+        "group_bootstrap": {
+          "method": "Percentile bootstrap resampling conservative event groups; 500 draws; seed 2026",
+          "accuracy_95_percent_interval": [
+            0.7555555555555555,
+            0.9555555555555556
+          ],
+          "supported_macro_f1_95_percent_interval": [
+            0.49771951700260525,
+            0.9400576986076984
+          ],
+          "caution": "Conditional sampling variability only; does not quantify scope error, missing reports, coding error or systematic autocoder bias"
+        }
+      },
+      "majority": {
+        "records": 45,
+        "event_groups": 45,
+        "source_reference_accuracy": 0.28888888888888886,
+        "macro_f1_supported_divisions": 0.0896551724137931,
+        "macro_f1_all_seven_divisions": 0.06403940886699508,
+        "weighted_f1": 0.12950191570881225,
+        "supported_reference_divisions": [
+          "2",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "unsupported_reference_divisions": [
+          "1",
+          "3"
+        ],
+        "reference_division_counts": {
+          "2": 10,
+          "4": 13,
+          "5": 3,
+          "6": 18,
+          "7": 1
+        },
+        "predicted_division_counts": {
+          "4": 45
+        },
+        "reference_interpretation": "Reproduction of OSHA published event divisions; individual label provenance not verified",
+        "group_bootstrap": {
+          "method": "Percentile bootstrap resampling conservative event groups; 500 draws; seed 2026",
+          "accuracy_95_percent_interval": [
+            0.15555555555555556,
+            0.4222222222222222
+          ],
+          "supported_macro_f1_95_percent_interval": [
+            0.05384615384615384,
+            0.11875
+          ],
+          "caution": "Conditional sampling variability only; does not quantify scope error, missing reports, coding error or systematic autocoder bias"
+        }
+      }
+    },
+    "ITA_2023_autocoder_comparison": {
+      "tfidf_logistic": {
+        "records": 4268,
+        "event_groups": 4025,
+        "source_reference_accuracy": 0.5405342080599812,
+        "macro_f1_supported_divisions": 0.31483383628962713,
+        "macro_f1_all_seven_divisions": 0.31483383628962713,
+        "weighted_f1": 0.5307674550191961,
+        "supported_reference_divisions": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "unsupported_reference_divisions": [],
+        "reference_division_counts": {
+          "1": 108,
+          "2": 141,
+          "3": 5,
+          "4": 866,
+          "5": 202,
+          "6": 1530,
+          "7": 1416
+        },
+        "predicted_division_counts": {
+          "1": 1,
+          "2": 610,
+          "4": 1606,
+          "5": 28,
+          "6": 1456,
+          "7": 567
+        },
+        "reference_interpretation": "Agreement with BLS autocoder predictions",
+        "group_bootstrap": {
+          "method": "Percentile bootstrap resampling conservative event groups; 500 draws; seed 2026",
+          "accuracy_95_percent_interval": [
+            0.5258303904330608,
+            0.5565802543380072
+          ],
+          "supported_macro_f1_95_percent_interval": [
+            0.3018072538851896,
+            0.3309703254522523
+          ],
+          "caution": "Conditional sampling variability only; does not quantify scope error, missing reports, coding error or systematic autocoder bias"
+        }
+      },
+      "majority": {
+        "records": 4268,
+        "event_groups": 4025,
+        "source_reference_accuracy": 0.20290534208059982,
+        "macro_f1_supported_divisions": 0.048194112081918865,
+        "macro_f1_all_seven_divisions": 0.048194112081918865,
+        "weighted_f1": 0.06845189958776761,
+        "supported_reference_divisions": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "unsupported_reference_divisions": [],
+        "reference_division_counts": {
+          "1": 108,
+          "2": 141,
+          "3": 5,
+          "4": 866,
+          "5": 202,
+          "6": 1530,
+          "7": 1416
+        },
+        "predicted_division_counts": {
+          "4": 4268
+        },
+        "reference_interpretation": "Agreement with BLS autocoder predictions",
+        "group_bootstrap": {
+          "method": "Percentile bootstrap resampling conservative event groups; 500 draws; seed 2026",
+          "accuracy_95_percent_interval": [
+            0.19166656288705547,
+            0.21480070754716982
+          ],
+          "supported_macro_f1_95_percent_interval": [
+            0.0459540250732113,
+            0.05051991625622227
+          ],
+          "caution": "Conditional sampling variability only; does not quantify scope error, missing reports, coding error or systematic autocoder bias"
+        }
+      }
+    },
+    "ITA_2024_autocoder_comparison": {
+      "tfidf_logistic": {
+        "records": 4116,
+        "event_groups": 3913,
+        "source_reference_accuracy": 0.5344995140913509,
+        "macro_f1_supported_divisions": 0.3278262540725944,
+        "macro_f1_all_seven_divisions": 0.3278262540725944,
+        "weighted_f1": 0.5303343005061292,
+        "supported_reference_divisions": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "unsupported_reference_divisions": [],
+        "reference_division_counts": {
+          "1": 45,
+          "2": 147,
+          "3": 4,
+          "4": 756,
+          "5": 208,
+          "6": 1599,
+          "7": 1357
+        },
+        "predicted_division_counts": {
+          "1": 2,
+          "2": 605,
+          "4": 1398,
+          "5": 40,
+          "6": 1518,
+          "7": 553
+        },
+        "reference_interpretation": "Agreement with BLS autocoder predictions",
+        "group_bootstrap": {
+          "method": "Percentile bootstrap resampling conservative event groups; 500 draws; seed 2026",
+          "accuracy_95_percent_interval": [
+            0.518598602309216,
+            0.5485709069431288
+          ],
+          "supported_macro_f1_95_percent_interval": [
+            0.3074025627409017,
+            0.3481973886494062
+          ],
+          "caution": "Conditional sampling variability only; does not quantify scope error, missing reports, coding error or systematic autocoder bias"
+        }
+      },
+      "majority": {
+        "records": 4116,
+        "event_groups": 3913,
+        "source_reference_accuracy": 0.1836734693877551,
+        "macro_f1_supported_divisions": 0.04433497536945813,
+        "macro_f1_all_seven_divisions": 0.04433497536945813,
+        "weighted_f1": 0.05700211118930331,
+        "supported_reference_divisions": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "unsupported_reference_divisions": [],
+        "reference_division_counts": {
+          "1": 45,
+          "2": 147,
+          "3": 4,
+          "4": 756,
+          "5": 208,
+          "6": 1599,
+          "7": 1357
+        },
+        "predicted_division_counts": {
+          "4": 4116
+        },
+        "reference_interpretation": "Agreement with BLS autocoder predictions",
+        "group_bootstrap": {
+          "method": "Percentile bootstrap resampling conservative event groups; 500 draws; seed 2026",
+          "accuracy_95_percent_interval": [
+            0.17186019925017576,
+            0.19576124566457276
+          ],
+          "supported_macro_f1_95_percent_interval": [
+            0.04190168237465744,
+            0.0467750427554664
+          ],
+          "caution": "Conditional sampling variability only; does not quantify scope error, missing reports, coding error or systematic autocoder bias"
+        }
+      }
+    }
+  },
+  "verification": {
+    "status": "passed",
+    "distinct_record_ids": true,
+    "source_target_integrity": true,
+    "predictor_is_narrative_only": true,
+    "sir_groups_and_exact_text_disjoint": true,
+    "sir_external_groups_disjoint": true,
+    "actual_date_boundaries_verified": true,
+    "scope_is_industry_proxy_not_ground_eligibility": true,
+    "external_2023_2024_shared_groups": 0
+  },
+  "warnings": [],
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "limits": [
+    "Industry proxy does not establish ground-worker activity.",
+    "Small SIR validation and temporal test samples; rare divisions poorly evaluated.",
+    "ITA labels are machine-generated; agreement does not establish hazard accuracy.",
+    "No pilot/worker interviews or independent human labels.",
+    "NTSB/ASRS have no harmonized OIICS occupational-hazard targets; no performance metrics calculated on them.",
+    "Test has now been evaluated; subsequent tuning requires a fresh evaluation protocol."
+  ]
+}

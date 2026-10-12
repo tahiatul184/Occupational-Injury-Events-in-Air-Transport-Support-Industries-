@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "distinct_record_ids": true,
+  "source_target_integrity": true,
+  "predictor_is_narrative_only": true,
+  "sir_groups_and_exact_text_disjoint": true,
+  "sir_external_groups_disjoint": true,
+  "actual_date_boundaries_verified": true,
+  "scope_is_industry_proxy_not_ground_eligibility": true,
+  "external_2023_2024_shared_groups": 0
+}

@@ -1,0 +1,115 @@
+{
+  "selected_model": "tfidf_logistic",
+  "selection_metric": "macro F1 over divisions actually represented in 2021 validation gold source codes",
+  "configuration_sha256": "0b7f3a2788d5462657a62bcaa6f8287c3c56ad1413e433567fe62506b21bae99",
+  "data_sha256": "bea81ee7c47e545f1a80016c07e36fc69fa8c052a0ec87e78897a6bb3ffc79fd",
+  "validation": {
+    "majority": {
+      "records": 34,
+      "event_groups": 34,
+      "source_reference_accuracy": 0.38235294117647056,
+      "macro_f1_supported_divisions": 0.0921985815602837,
+      "macro_f1_all_seven_divisions": 0.0790273556231003,
+      "weighted_f1": 0.21151439299123906,
+      "supported_reference_divisions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "unsupported_reference_divisions": [
+        "7"
+      ],
+      "reference_division_counts": {
+        "1": 2,
+        "2": 6,
+        "3": 1,
+        "4": 13,
+        "5": 1,
+        "6": 11
+      },
+      "predicted_division_counts": {
+        "4": 34
+      },
+      "reference_interpretation": "Reproduction of OSHA published event divisions; individual label provenance not verified",
+      "fit_seconds": 0.006758928298950195,
+      "tfidf_features": 0
+    },
+    "tfidf_logistic": {
+      "records": 34,
+      "event_groups": 34,
+      "source_reference_accuracy": 0.8823529411764706,
+      "macro_f1_supported_divisions": 0.6257215007215007,
+      "macro_f1_all_seven_divisions": 0.5363327149041435,
+      "weighted_f1": 0.8414502164502164,
+      "supported_reference_divisions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "unsupported_reference_divisions": [
+        "7"
+      ],
+      "reference_division_counts": {
+        "1": 2,
+        "2": 6,
+        "3": 1,
+        "4": 13,
+        "5": 1,
+        "6": 11
+      },
+      "predicted_division_counts": {
+        "2": 5,
+        "4": 15,
+        "5": 1,
+        "6": 13
+      },
+      "reference_interpretation": "Reproduction of OSHA published event divisions; individual label provenance not verified",
+      "fit_seconds": 0.03524208068847656,
+      "tfidf_features": 1145
+    },
+    "tfidf_linear_svm": {
+      "records": 34,
+      "event_groups": 34,
+      "source_reference_accuracy": 0.8823529411764706,
+      "macro_f1_supported_divisions": 0.6257215007215007,
+      "macro_f1_all_seven_divisions": 0.5363327149041435,
+      "weighted_f1": 0.8414502164502164,
+      "supported_reference_divisions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "unsupported_reference_divisions": [
+        "7"
+      ],
+      "reference_division_counts": {
+        "1": 2,
+        "2": 6,
+        "3": 1,
+        "4": 13,
+        "5": 1,
+        "6": 11
+      },
+      "predicted_division_counts": {
+        "2": 5,
+        "4": 15,
+        "5": 1,
+        "6": 13
+      },
+      "reference_interpretation": "Reproduction of OSHA published event divisions; individual label provenance not verified",
+      "fit_seconds": 0.01643824577331543,
+      "tfidf_features": 1145
+    }
+  },
+  "test_metrics_used_for_selection": false,
+  "refit_on_validation": false
+}

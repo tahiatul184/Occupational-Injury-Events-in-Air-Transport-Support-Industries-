@@ -1,0 +1,79 @@
+{
+  "prepared_date": "2026-10-12",
+  "historical_source_access_and_audit_date": "2026-10-11",
+  "historical_sir_original_download_date": null,
+  "cohort_sha256": "bea81ee7c47e545f1a80016c07e36fc69fa8c052a0ec87e78897a6bb3ffc79fd",
+  "cohort_rows": 9264,
+  "retained_rows": 8665,
+  "excluded_rows": 599,
+  "cohort_columns": [
+    "record_id",
+    "source",
+    "source_record_id",
+    "source_row_number",
+    "event_date",
+    "naics",
+    "job_description",
+    "narrative",
+    "text_sha256",
+    "source_event_code",
+    "source_event_title",
+    "event_division",
+    "label_provenance",
+    "coding_version",
+    "original_event_group",
+    "employer_day_key",
+    "development_only",
+    "latest_sir_group_year",
+    "worker_role_text_hit",
+    "airborne_text_hit",
+    "scope_basis",
+    "event_group",
+    "year",
+    "split",
+    "exclusion_reason",
+    "sir_group_year"
+  ],
+  "sir_checkpoint_sha256": "85fb77e7b30d2cf86696bd36e6611c323217276b2cb7b776b090592c329bce1c",
+  "evaluated_predictions_sha256": "c48ac9a2336a91be93010fba2ad67923a028b7ff1806f5c6f4bdb3ca48b32ef5",
+  "source_portals": {
+    "SIR": "https://www.osha.gov/severeinjury/",
+    "ITA": "https://www.osha.gov/itadata"
+  },
+  "sir_snapshot": "January 2015 through November 2025",
+  "sir_archive_sha256": "a3f7f434e200fb956131f12277378e592993a25db3f328716fbece106f846bb0",
+  "ita_archives": [
+    {
+      "filename": "ITA_Case_Detail_Data_2023_through_12-31-2023OIICS.zip",
+      "url": "https://www.osha.gov/sites/default/largefiles/ITA_Case_Detail_Data_2023_through_12-31-2023OIICS.zip",
+      "bytes": 130062179,
+      "sha256": "fbcfc749c99bc951d7704c768c3fdf7b76cd922c1f9130f8d63a2dd6e809bef0",
+      "csv_members": [
+        {
+          "name": "ITA Case Detail Data 2023 through 12-31-2023OIICS.csv",
+          "bytes": 654687687
+        }
+      ]
+    },
+    {
+      "filename": "ITA_Case_Detail_Data_2024_through_12-31-2025.zip",
+      "url": "https://www.osha.gov/sites/default/files/ITA_Case_Detail_Data_2024_through_12-31-2025.zip",
+      "bytes": 86006704,
+      "sha256": "707ae94b118d6606a71698a88c297691494399a8c6a5eb6460a3f56513de9951",
+      "csv_members": [
+        {
+          "name": "ITA_Case_Detail_Data_2024_through_12-31-2025.csv",
+          "bytes": 519678844
+        }
+      ]
+    }
+  ],
+  "label_versions": {
+    "SIR": "OIICS 2.x period 2015-2022; 2023+ excluded",
+    "ITA": "BLS SOII autocoder OIICS 2.01"
+  },
+  "raw_archives_included": false,
+  "report_level_data_in_public_repository": false,
+  "public_release_data_license": "not assigned",
+  "code_license_recommendation": "MIT; author adoption pending before public publication"
+}

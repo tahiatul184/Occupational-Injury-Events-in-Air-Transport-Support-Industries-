@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+data/private/
+local_outputs/
+*.zip
+*.joblib
+*.pkl
+.DS_Store

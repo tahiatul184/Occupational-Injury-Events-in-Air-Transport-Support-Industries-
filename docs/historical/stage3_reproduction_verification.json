@@ -1,0 +1,74 @@
+{
+  "stage": "3",
+  "prepared_date": "2026-10-12",
+  "status": "passed",
+  "full_pipeline_run": true,
+  "prediction_and_metric_reproduction": {
+    "status": "passed",
+    "cohort_sha256": "bea81ee7c47e545f1a80016c07e36fc69fa8c052a0ec87e78897a6bb3ffc79fd",
+    "configuration_sha256": "0b7f3a2788d5462657a62bcaa6f8287c3c56ad1413e433567fe62506b21bae99",
+    "evaluated_prediction_rows": 16858,
+    "evaluated_predictions_sha256": "c48ac9a2336a91be93010fba2ad67923a028b7ff1806f5c6f4bdb3ca48b32ef5",
+    "all_aggregate_metrics_match": true,
+    "all_bootstrap_intervals_match": true,
+    "all_six_confusion_matrices_match": true,
+    "runtime": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scikit_learn": "1.8.0"
+    },
+    "new_human_labels": 0,
+    "new_validation_cohort": false
+  },
+  "derived_table_reproduction": {
+    "status": "passed",
+    "six_derived_tables_match_archived": true,
+    "coefficients_use_training_fit_only": true,
+    "causal_interpretation": false
+  },
+  "raw_ita_reconstruction": {
+    "status": "passed",
+    "both_archive_sha256_matches": true,
+    "cleaning_audit": {
+      "status": "passed",
+      "cohort_sha256": "bea81ee7c47e545f1a80016c07e36fc69fa8c052a0ec87e78897a6bb3ffc79fd",
+      "candidate_reports": 9264,
+      "retained": 8665,
+      "excluded": 599,
+      "split_counts": {
+        "ITA_2023_autocoder_comparison": 4268,
+        "ITA_2024_autocoder_comparison": 4116,
+        "excluded": 599,
+        "train": 202,
+        "SIR_2022_temporal_test": 45,
+        "validation": 34
+      },
+      "new_human_labels": 0
+    },
+    "same_full_cohort_checksum": true,
+    "sir_input": "checksum-verified historical 414-row SIR checkpoint; not a new full SIR extraction"
+  },
+  "cff_schema_version": "1.2.0",
+  "cff_schema_valid": true,
+  "all_python_files_parse": 13,
+  "schema_columns": 26,
+  "candidate_records": 9264,
+  "all_seven_generated_png_files_match_archive_bytes": true,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "joblib": "1.5.3",
+    "PyYAML": "6.0.3"
+  },
+  "new_human_labels": 0,
+  "new_validation_cohort": false,
+  "public_github_repository_created": false,
+  "zenodo_deposit_created": false,
+  "doi_issued": false,
+  "code_license": "MIT recommendation prepared; author adoption pending"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "evaluated_prediction_rows": 16858,
+  "evaluated_predictions_sha256": "c48ac9a2336a91be93010fba2ad67923a028b7ff1806f5c6f4bdb3ca48b32ef5",
+  "aggregate_metrics_match": true,
+  "bootstrap_intervals_match": true,
+  "six_confusion_matrices_match": true,
+  "configuration_sha256": "0b7f3a2788d5462657a62bcaa6f8287c3c56ad1413e433567fe62506b21bae99",
+  "cohort_sha256": "bea81ee7c47e545f1a80016c07e36fc69fa8c052a0ec87e78897a6bb3ffc79fd",
+  "new_validation_cohort": false,
+  "new_human_labels": 0,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "prepared_date": "2026-10-12",
+  "cohort_reconstruction_test": "Recombined archived prepared SIR/ITA candidate tables; exact cohort checksum matched",
+  "raw_ita_archives_reparsed_in_this_run": false,
+  "public_report_level_files": 0,
+  "model_settings_changed": false,
+  "code_license_adopted": false
+}
